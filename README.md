@@ -19,7 +19,7 @@ Note: If you don't do this properly, the module won't work.
 const Discord = require('discord.js'); // Importing the Discord.JS module.
 const client = new Discord.Client(); // Creating your DiscordClient.
 require("discord-buttons")(client); // Import and require discord-buttons library.
-require('discord-slider')(client); // Import and require discord-sliders library.
+require('discord-sliders')(client); // Import and require discord-sliders library.
 ```
 
 <br />
@@ -54,13 +54,13 @@ module.exports = {
     name: 'menutest',
     description: 'Discord-Sliders package test!',
     async execute(client, message) {
-        let embed1 = new Discord.MessageEmbed()
+        let embed1 = new MessageEmbed()
             .setTitle('This is the first option!')
             .setDescription('Description...')
         let embed2 = new MessageEmbed()
             .setTitle('This is the second option')
             .setDescription('Description')
-        return message.chanel.createSlider(message.author.id, [embed1, embed2], "➡", "⬅")
+        return message.channel.createSlider(message.author.id, [embed1, embed2], "➡", "⬅")
     }
 }
 ```
