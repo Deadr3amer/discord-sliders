@@ -3,9 +3,12 @@
 ![GitHub issues](https://img.shields.io/github/issues/Deadr3amer/discord-sliders?color=red&label=Issues%2FBugs)
 ![NPM](https://img.shields.io/npm/l/discord-sliders)
 ![npm](https://img.shields.io/npm/v/discord-sliders)
-### [Note: This is a fixed version of [discord-slider](https://www.npmjs.com/package/discord-slider) package, which was made by: gaetan20]
-Welcome to this page! Let me explain, what discord-sliders is.
-It is a small node.js package, which allows you to create Discord EmbedPages contolled by buttons easily.
+### [Note: This package is only compatible with discord.js version 12.5.3.]
+> [Note v2: This is a fixed version of [discord-slider](https://www.npmjs.com/package/discord-slider) package, which was made by: gaetan20]
+
+
+>Welcome to this page! Let me explain, what discord-sliders is.
+It is a small node.js package, which allows you to create Discord Embed Pages contolled by buttons easily.
 
 ## Part 1 - How to install?
 Type the following command in terminal:
@@ -33,6 +36,8 @@ channel.createSlider(userID, embedsArray, emojiNext, emojiBack)
 
 ## Part 4 - Example (wthout CommandHandler)...
 ```js
+const Discord = require('discord.js')
+
 client.on('message', async (message) => {
     if(message.content === 'menu') {
         let embed1 = new Discord.MessageEmbed()
@@ -40,7 +45,7 @@ client.on('message', async (message) => {
             .setDescription('Description...')
         let embed2 = new Discord.MessageEmbed()
             .setTitle('This is the second option')
-            .setDescription('Description')
+            .setDescription('Description...')
         return message.channel.createSlider(message.author.id, [embed1, embed2], "➡", "⬅")
     }
 })
@@ -72,4 +77,4 @@ module.exports = {
 
 ## Part 6 - If you run into any issues, feel free to ask me on Discord!
 
-[Discord](https://discord.gg/vRvtnGt82p) - ask ONLY on #🔗┇js-help
+[Discord](https://discord.gg/vRvtnGt82p) - ask ONLY on `#🔗┇js-help`
